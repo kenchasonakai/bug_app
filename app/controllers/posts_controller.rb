@@ -5,7 +5,15 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    respond_to do |format|
+      format.html do
+        @post = Post.find(params[:id])
+      end
+      format.json do
+        post = Post.find(params[:id])
+        render json: { content: post.content }
+      end
+    end
   end
 
   def new
