@@ -18,4 +18,10 @@ module.exports = {
     logs: true,
     themeRoot: ":root",
   },
+  theme: {
+    container: {
+      center: true,
+      padding: '1rem',
+    },
+  }
 }
