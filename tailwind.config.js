@@ -7,7 +7,7 @@ module.exports = {
     './app/assets/stylesheets/**/*.css',
     './app/javascript/**/*.js'
   ],
-  plugins: [require("daisyui")],
+  plugins: [require("flowbite-typography"), require("daisyui")],
   daisyui: {
     themes: false,
     darkTheme: false,

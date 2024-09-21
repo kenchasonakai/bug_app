@@ -1,15 +1,22 @@
 <div class="flex items-center justify-center">
   <div class="w-full max-w-2xl rounded-lg p-8">
-    <article class="mx-auto">
-      <h1 class="text-2xl font-extrabold tracking-tight text-slate-900 md:text-3xl">
-        <%= @post.title %>
-      </h1>
-      <div class="mt-12 prose prose-slate"><div id="markdown"><%= @post.content %></div></div>
-    </article>
+    <div class="flex align-center">
+      <div class="avatar placeholder">
+        <div class="bg-neutral text-neutral-content w-8 rounded-full">
+          <span>F</span>
+        </div>
+      </div>
+      <div class="my-auto text-lg ms-3">by <%= "@#{@post.user.nickname}" %></div>
+    </div>
+    <h1 class="text-4xl font-bold mb-4"><%= @post.title %></h1>
+    <div class="flex items-center justify-start">
+      <% 5.times do %>
+        <%= link_to "Tag", "#", class: "badge badge-ghost me-1 p-3 rounded z-10" %>
+      <% end %>
+    </div>
+    <div class="mt-4 mb-8">
+      <p>投稿日 <%= @post.created_at.strftime("%Y年%m月%d日") %></p>
+    </div>
+    <article class="format lg:format-lg"><div class="opacity-0"><%= @post.content %></div></article>
   </div>
 </div>
-<script type="module">
-  import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
-  document.getElementById('markdown').innerHTML =
-    marked.parse(`<%= @post.content %>`);
-</script>
