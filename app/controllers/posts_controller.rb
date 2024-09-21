@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.all.order(created_at: :desc)
   end
 
   def show
@@ -15,9 +15,10 @@ class PostsController < ApplicationController
     @post = current_user.posts.build(post_params)
 
     if @post.save
-      redirect_to post_path(@post)
+      redirect_to posts_path, notice: "投稿しました"
     else
-      render :new
+      flash.now[:alert] = "投稿に失敗しました\n#{@post.errors.full_messages.join('\n')}"
+      render :new, status: :unprocessable_entity
     end
   end
 
