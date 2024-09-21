@@ -19,6 +19,15 @@
 
   <body>
     <%= render "shared/header" %>
+    <% if notice %>
+      <div class="alert alert-success">
+        <%= notice %>
+      </div>
+    <% elsif alert %>
+      <div class="alert alert-error">
+        <%= alert %>
+      </div>
+    <% end %>
     <main class="container min-h-screen">
       <%= yield %>
     </main>
