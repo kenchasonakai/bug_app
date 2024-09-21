@@ -6,4 +6,6 @@ class User < ApplicationRecord
          :trackable
 
   validates :nickname, presence: true, length: { maximum: 50 }
+
+  has_many :posts, dependent: :destroy
 end
