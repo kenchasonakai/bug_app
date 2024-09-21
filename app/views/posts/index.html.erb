@@ -1,0 +1,29 @@
+<div class="flex items-center justify-center">
+  <div class="w-full max-w-2xl rounded-lg p-8">
+    <% @posts.each do |post| %>
+      <div class="card bg-base-100 w-full shadow-xl border-double border-4 border-sky-500 mb-3">
+        <div class="card-body relative">
+          <div class="flex align-center">
+            <div class="avatar placeholder">
+              <div class="bg-neutral text-neutral-content w-12 rounded-full">
+                <span>F</span>
+              </div>
+            </div>
+            <div class="flex flex-col ps-3">
+              <p>by <%= "@#{post.user.nickname}" %></p>
+              <p><%= post.created_at.strftime("%Y年%m月%d日") %></p>
+            </div>
+          </div>
+          <div class="ms-12">
+            <h2 class="card-title"><%= link_to post.title, post_path(post), class: "hover:underline after:absolute after:inset-0 mb-2" %></h2>
+            <div class="flex items-center justify-start">
+              <% 5.times do %>
+                <%= link_to "Tag", "#", class: "badge badge-ghost me-1 p-3 rounded z-10" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
