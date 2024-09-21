@@ -5,12 +5,12 @@
 # below each fixture, per the syntax in the comments below
 #
 
-one_user:
-  email: user_one@example.com
-  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
-  nickname: UserOne
+one_post:
+  title: "A very long title that is definitely more than fifty characters long"
+  content: <%= "A" * 60000 %>
+  user: one_user
 
-two_user:
-  email: user_two@example.com
-  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
-  nickname: UserTwo
+two_post:
+  title: "Another very long title that is definitely more than fifty characters long"
+  content: <%= "B" * 60000 %>
+  user: two_user
