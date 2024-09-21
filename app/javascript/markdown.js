@@ -1,6 +1,7 @@
 import { ready, parse } from '@logue/markdown-wasm';
-await ready();
+import DOMPurify from 'dompurify';
 
+await ready();
 document.addEventListener('turbo:load', () => {
   const markdownArea = document.querySelector('.format');
 
@@ -9,7 +10,7 @@ document.addEventListener('turbo:load', () => {
   fetch(`${window.location.pathname}.json`)
   .then(response => response.json())
   .then(data => {
-    markdownArea.innerHTML = parse(data.content);
+    markdownArea.innerHTML = parse(DOMPurify.sanitize(data.content))
   })
   .catch(error => console.error(error));
 });
