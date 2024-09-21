@@ -18,6 +18,10 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "shared/header" %>
+    <main class="h-screen">
+      <%= yield %>
+    </main>
+    <%= render "shared/footer" %>
   </body>
 </html>
