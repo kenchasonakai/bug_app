@@ -25,17 +25,17 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create post" do
-    assert_difference('Post.count') do
-      post posts_url, params: { post: { title: 'New Post', content: 'This is a new post.' } }
+    assert_difference("Post.count") do
+      post posts_url, params: { post: { title: "New Post", content: "This is a new post." } }
     end
 
     assert_redirected_to posts_path
-    assert_equal '投稿しました', flash[:notice]
+    assert_equal "投稿しました", flash[:notice]
   end
 
   test "should not create post with invalid data" do
-    assert_no_difference('Post.count') do
-      post posts_url, params: { post: { title: '', content: '' } }
+    assert_no_difference("Post.count") do
+      post posts_url, params: { post: { title: "", content: "" } }
     end
 
     assert_response :unprocessable_entity
