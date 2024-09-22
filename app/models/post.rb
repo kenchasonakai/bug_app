@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  ActsAsTaggableOn.delimiter = ' '
+  ActsAsTaggableOn.delimiter = " "
   belongs_to :user
 
   validates :title, presence: true, length: { maximum: 50 }
