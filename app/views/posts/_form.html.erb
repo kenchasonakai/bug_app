@@ -1,0 +1,12 @@
+<%= form_with model: post do |form| %>
+  <%= form.label :title, class: "input input-bordered flex items-center gap-2 mb-5" do %>
+    <%= form.text_field :title, class: "grow", placeholder: "タイトルを入力してください" %>
+  <% end %>
+  <%= form.label :tag_list, class: "flex items-center gap-2 mb-5 outline-none" do %>
+    <%= form.text_field :tag_list, class: "grow", placeholder: "スペース区切りでタグを入力してください" %>
+  <% end %>
+  <%= form.text_area :content, class: "textarea textarea-bordered w-full field-size-content min-h-80", placeholder: "好きに書いてね" %>
+  <div class="flex items-center justify-between">
+    <%= form.submit submit_message, class: "btn btn-primary" %>
+  </div>
+<% end %>
