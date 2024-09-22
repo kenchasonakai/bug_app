@@ -10,7 +10,7 @@ document.addEventListener('turbo:load', () => {
   fetch(`${window.location.pathname}.json`)
   .then(response => response.json())
   .then(data => {
-    markdownArea.innerHTML = parse(DOMPurify.sanitize(data.content))
+    markdownArea.innerHTML = DOMPurify.sanitize(parse(data.content))
   })
   .catch(error => console.error(error));
 });
