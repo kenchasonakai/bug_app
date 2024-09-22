@@ -22,6 +22,10 @@ default: &default
   host: <%= ENV["DB_HOST"] %>
   username: postgres
   password: postgres
+  <% else %>
+  host: db
+  username: postgres
+  password: password
   <% end %>
 
 
