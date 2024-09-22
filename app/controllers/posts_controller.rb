@@ -2,8 +2,8 @@ class PostsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
-    if params[:tag]
-      @posts = Post.tagged_with(params[:tag]).order(created_at: :desc)
+    if params[:tag].present? && params[:tag].is_a?(String)
+      @posts = Post.tagged_with(params[:tag].strip).order(created_at: :desc)
     else
       @posts = Post.all.order(created_at: :desc)
     end
