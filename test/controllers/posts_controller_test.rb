@@ -13,6 +13,12 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     assert_not_nil assigns(:posts)
   end
 
+  test "should get index with tag" do
+    get posts_url, params: { tag: "example_tag" }
+    assert_response :success
+    assert_not_nil assigns(:posts)
+  end
+
   test "should get show" do
     get post_url(@post)
     assert_response :success

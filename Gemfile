@@ -66,4 +66,4 @@ gem "acts-as-taggable-on", "~> 11.0"
 
 gem "rails-i18n", "~> 7.0.0"
 
-gem 'faker'
+gem "faker"
