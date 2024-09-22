@@ -10,8 +10,8 @@
     </div>
     <h1 class="text-4xl font-bold mb-4"><%= @post.title %></h1>
     <div class="flex items-center justify-start">
-      <% 5.times do %>
-        <%= link_to "Tag", "#", class: "badge badge-ghost me-1 p-3 rounded z-10" %>
+      <% @post.tag_list.each do |tag| %>
+        <%= link_to tag, "#", class: "badge badge-ghost me-1 p-3 rounded z-10" %>
       <% end %>
     </div>
     <div class="mt-4 mb-8">
