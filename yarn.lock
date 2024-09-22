@@ -225,6 +225,11 @@
   resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-7.2.100.tgz#86ec1c2e00c357cef1e421fd63863d5c34339ce8"
   integrity sha512-7xtIENf0Yw59AFDM3+xqxPCZxev3QVAqjPmUzmgsB9eL8S/zTpB0IU9srNc7XknzJI4e09XKNnCaJRx3gfYzXA==
 
+"@yaireo/tagify@^4.31.3":
+  version "4.31.3"
+  resolved "https://registry.yarnpkg.com/@yaireo/tagify/-/tagify-4.31.3.tgz#bc11f30fc137ac662303ed4db7aa2f4c3866777d"
+  integrity sha512-YpBvYxqkJkOGyHg+0OzTCgt8Zb4vlYq+qE7jgxBLyPrvheSI0SXj3dbc4lVhCQhtbos4Kb2+t7ou8a+LYQk0Og==
+
 ansi-regex@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-5.0.1.tgz#082cb2c89c9fe8659a311a53bd6a4dc5301db304"

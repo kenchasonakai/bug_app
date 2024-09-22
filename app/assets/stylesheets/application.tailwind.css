@@ -1,8 +1,20 @@
+@import "@yaireo/tagify/dist/tagify.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-.field-size-content {
-  field-sizing: content;
+@layer base {
+  tags {
+    @apply input;
+    @apply input-bordered;
+    .tagify__tag {
+      @apply my-auto;
+    }
+    .tagify__input {
+      @apply my-auto;
+    }
+  }
+  .field-size-content {
+    field-sizing: content;
+  }
 }
