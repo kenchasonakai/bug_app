@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[index show]
-
+  skip_before_action :authenticate_user!
   def index
     if params[:tag].present? && params[:tag].is_a?(String)
       @posts = Post.tagged_with(params[:tag].strip).order(created_at: :desc)
@@ -12,7 +11,7 @@ class PostsController < ApplicationController
   def show
     respond_to do |format|
       format.html do
-        @post = Post.find(params[:id])
+        @post = current_user.posts.find(params[:id])
       end
       format.json do
         post = Post.find(params[:id])
@@ -41,7 +40,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post = current_user.posts.find(params[:id])
+    @post = Post.find(params[:id])
 
     if @post.update(post_params)
       redirect_to posts_path, notice: "更新しました"
@@ -60,6 +59,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :content, :tag_list)
+    params.require(:post).permit(:title, :tag_list)
   end
 end
