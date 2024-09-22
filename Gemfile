@@ -68,4 +68,4 @@ gem "rails-i18n", "~> 7.0.0"
 
 gem "faker"
 
-gem "dockerfile-rails", ">= 1.6", :group => :development
+gem "dockerfile-rails", ">= 1.6", group: :development
