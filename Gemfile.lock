@@ -208,6 +208,9 @@ GEM
     rails-html-sanitizer (1.6.0)
       loofah (~> 2.21)
       nokogiri (~> 1.14)
+    rails-i18n (7.0.9)
+      i18n (>= 0.7, < 2)
+      railties (>= 6.0.0, < 8)
     railties (7.2.1)
       actionpack (= 7.2.1)
       activesupport (= 7.2.1)
@@ -321,6 +324,7 @@ DEPENDENCIES
   puma (>= 5.0)
   rails (~> 7.2.1)
   rails-controller-testing (~> 1.0)
+  rails-i18n (~> 7.0.0)
   rubocop-rails-omakase
   selenium-webdriver
   sprockets-rails
