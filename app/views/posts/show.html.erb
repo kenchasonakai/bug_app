@@ -4,7 +4,7 @@
       <div class="flex align-center">
         <div class="avatar placeholder">
           <div class="bg-neutral text-neutral-content w-8 rounded-full">
-            <span>F</span>
+            <span><%= @post.user.nickname_initial %></span>
           </div>
         </div>
         <div class="my-auto text-lg ms-3">by <%= "@#{@post.user.nickname}" %></div>

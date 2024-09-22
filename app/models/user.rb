@@ -7,6 +7,10 @@ class User < ApplicationRecord
 
   has_many :posts, dependent: :destroy
 
+  def nickname_initial
+    nickname.first.upcase
+  end
+
   private
 
   # NOTE: IPアドレスを持ちたくなかったため、以下のメソッドをオーバーライド
