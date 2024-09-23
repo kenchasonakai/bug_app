@@ -34,6 +34,7 @@ services:
       - .:/myapp
     environment:
       TZ: Asia/Tokyo
+      REDIS_URL: redis://redis:6379/0
     ports:
       - "3000:3000"
     user: "1000:1000"
