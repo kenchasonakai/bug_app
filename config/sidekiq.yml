@@ -1,5 +1,5 @@
 scheduler:
   schedule:
     sample:
-      cron: "* * * * *"
+      cron: "0 0 * * *"
       class: HelloWorldJob
