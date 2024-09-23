@@ -1,5 +1,5 @@
-require 'sidekiq/web'
-require 'sidekiq-scheduler/web'
+require "sidekiq/web"
+require "sidekiq-scheduler/web"
 
 Rails.application.routes.draw do
   mount Sidekiq::Web => "/sidekiq" if Rails.env.development?
