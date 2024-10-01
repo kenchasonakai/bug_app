@@ -49,6 +49,6 @@
     <div class="mt-4 mb-8">
       <p>投稿日 <%= @post.created_at.strftime("%Y年%m月%d日") %></p>
     </div>
-    <article class="format lg:format-lg"><div class="opacity-0"><%= @post.content %></div></article>
+    <article class="format lg:format-lg break-words"><div class="opacity-0"><%= @post.content %></div></article>
   </div>
 </div>
