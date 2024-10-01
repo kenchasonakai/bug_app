@@ -7,6 +7,7 @@ docker compose up
 はじめようページからユーザー登録を行ってください
 
 バグ修正後のコードの詳細は下記プルリクエストから確認出来ます
+
 https://github.com/kenchasonakai/bug_app/pull/16
 
 ## エラー1
