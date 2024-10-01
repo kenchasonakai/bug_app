@@ -18,7 +18,7 @@
             <h2 class="card-title"><%= link_to post.title, post_path(post), class: "hover:underline after:absolute after:inset-0 mb-2" %></h2>
             <div class="flex items-center justify-start">
               <% post.tag_list.each do |tag| %>
-                <%= link_to tag, posts_path(tag: 'Ruby'), class: "badge badge-ghost me-1 p-3 rounded z-10" %>
+                <%= link_to tag, posts_path(tag: tag), class: "badge badge-ghost me-1 p-3 rounded z-10" %>
               <% end %>
             </div>
           </div>
