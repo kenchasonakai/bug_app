@@ -64,7 +64,7 @@ gem "rails-controller-testing", "~> 1.0"
 
 gem "acts-as-taggable-on", "~> 11.0"
 
-gem "rails-i18n", "~> 7.0.0"
+gem "rails-i18n", "~> 7.0.10"
 
 gem "faker"
 
