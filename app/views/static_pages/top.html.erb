@@ -6,9 +6,9 @@
         バグばかりのアプリケーションへようこそ。このアプリはいたるところにバグが潜んでいます。このアプリを使ってバグを見つけて報告してください。
       </p>
       <% if user_signed_in? %>
-        <%= link_to "はじめよう", "posts_path", class: "btn btn-primary" %>
+        <%= link_to "はじめよう", posts_path, class: "btn btn-primary" %>
       <% else %>
-        <%= link_to "はじめよう", "new_user_registration_path", class: "btn btn-primary" %>
+        <%= link_to "はじめよう", new_user_registration_path, class: "btn btn-primary" %>
       <% end %>
     </div>
   </div>
